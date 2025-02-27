@@ -8,13 +8,30 @@ const enterSchema = Schema({
     },
     impact:{
         type: String,
-        enum:["LOW", "MEDIUM", "HIGHT"],
-        default: "LOW"
+        enum:["BAJO", "MEDIO", "ALTO"],
+        default: "BAJO"
     },
-    trajectory:{
+    foundingDate:{
         //1990-01-01
         type: Date,
-        required: [true, "La fecha es requerida"]
+        required: [true, "La fecha de fundacion de su empresa es requerida"]
+        
+    },
+    email:{
+        type: String,
+        required: [true, "El correo es requerido"]
+    },
+    phone:{
+        type: String,
+        required: [true, "Su numero de telefono es requerido"],
+        max:[8, "No se admiten mas de 8 caracteres"]
+
+
+    },
+    address:{
+        type: String,
+        required: [true, "Su direccion es requerida"],
+        max: [100, "No se admiten mas de 100 caracteres"]
     },
 },
 {
