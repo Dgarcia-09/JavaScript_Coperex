@@ -1,0 +1,277 @@
+{
+	"info": {
+		"_postman_id": "7fa5556f-7455-4160-ae74-0addac522be7",
+		"name": "Coperex",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42532049"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"DiegoGarcia\",\r\n    \"email\": \"diego@gmail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/coperex/v1/auth/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"coperex",
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    //\"username\": \"DDGGG\",\r\n    \"email\": \"diego@gmail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/coperex/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"coperex",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "updatePassword",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2MwZmQ5MDQ3MTEyZjA5NDkwNDJmMDEiLCJpYXQiOjE3NDA3MDE2OTYsImV4cCI6MTc0MDcwNTI5Nn0.KwEdvoZagZWs4yAthQFqKWQpB4R5uF-bsa9AfHTFi2U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oldPassword\": \"12345678\",\r\n    \"newPassword\": \"abeja123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/coperex/v1/user/updatePassword/67c0fd9047112f0949042f01",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"coperex",
+								"v1",
+								"user",
+								"updatePassword",
+								"67c0fd9047112f0949042f01"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Enterprise",
+			"item": [
+				{
+					"name": "agregarEmpresa",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2MxMzQ3YzU5N2MzMTZmMzQyYzdjYmUiLCJpYXQiOjE3NDA3MTUxNDYsImV4cCI6MTc0MDcxODc0Nn0.N1GWlStqDumeOX32cInh3oOgNeolVGkFJXvVJLDv1_4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"El vaticano\",\r\n    \"impact\": \"ALTO\",\r\n    \"foundingDate\": \"2024-02-27\",\r\n    \"email\": \"vati@gmail.com\",\r\n    \"phone\": \"12345678\",\r\n    \"category\": \"OTROS\",\r\n    \"address\": \"uhsaoifjdisjhdshf\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/coperex/v1/enterprise/agregarEmpresa",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"coperex",
+								"v1",
+								"enterprise",
+								"agregarEmpresa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizarEmpresa",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2MxMzQ3YzU5N2MzMTZmMzQyYzdjYmUiLCJpYXQiOjE3NDA3MTUxNDYsImV4cCI6MTc0MDcxODc0Nn0.N1GWlStqDumeOX32cInh3oOgNeolVGkFJXvVJLDv1_4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"CouCou\",\r\n    \"impact\": \"ALTO\",\r\n    \"email\": \"gerfor@gmail.com\",\r\n    \"phone\": \"23454678\",\r\n    \"category\": \"TECNOLOGIA\",\r\n    \"address\": \"uhsaoifjdisjhdshf\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/coperex/v1/enterprise/actualizarEmpresa/67c108fc59da7dc07482fbec",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"coperex",
+								"v1",
+								"enterprise",
+								"actualizarEmpresa",
+								"67c108fc59da7dc07482fbec"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar/Filtrar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/coperex/v1/enterprise/filtrarEmpresas",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"coperex",
+								"v1",
+								"enterprise",
+								"filtrarEmpresas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "generarReporte",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/coperex/v1/enterprise/generarReporte",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"coperex",
+								"v1",
+								"enterprise",
+								"generarReporte"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

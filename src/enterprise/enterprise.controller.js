@@ -159,13 +159,8 @@ export const generateExcel = async (req, res) => {
             { header: "Fecha fundacion", key: 'foundingDate', width: 20 },
             { header: "Email", key: 'email', width: 30 },
             { header: "Telefono", key: 'phone', width: 20 },
-<<<<<<< Updated upstream
-            { header: "Direccion", key: 'address', width: 30 }
-        ]
-=======
             { header: "Direccion", key: 'address', width: 60 }
         ];
->>>>>>> Stashed changes
 
         enterprises.forEach(enterprise => {
             worksheet.addRow({

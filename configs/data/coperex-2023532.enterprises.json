@@ -1,0 +1,178 @@
+[{
+  "_id": {
+    "$oid": "67c1cfcb5bfea04e68c12f35"
+  },
+  "name": "McDonalds",
+  "impact": "ALTO",
+  "foundingDate": {
+    "$date": {
+      "$numberLong": "-1099612800000"
+    }
+  },
+  "email": "mcdonalds@gmail.com",
+  "phone": "86453647",
+  "category": "ALIMENTOS",
+  "address": "Calz. San Juan 8-89"
+},
+{
+  "_id": {
+    "$oid": "67c1d0915bfea04e68c12f39"
+  },
+  "name": "Pollo Campero",
+  "impact": "ALTO",
+  "foundingDate": {
+    "$date": {
+      "$numberLong": "-806457600000"
+    }
+  },
+  "email": "polloCamperoGT@gmail.com",
+  "phone": "86756409",
+  "category": "ALIMENTOS",
+  "address": "Torre Premier Club, Frente a, Calzada Roosevelt 0-19"
+},
+{
+  "_id": {
+    "$oid": "67c1d0fc5bfea04e68c12f3d"
+  },
+  "name": "Nestle",
+  "impact": "ALTO",
+  "foundingDate": {
+    "$date": {
+      "$numberLong": "-2510524800000"
+    }
+  },
+  "email": "nestlecr@gmail.com",
+  "phone": "09876564",
+  "category": "ALIMENTOS",
+  "address": "48 Calle 15-74, Cdad. de Guatemala"
+},
+{
+  "_id": {
+    "$oid": "67c1d1845bfea04e68c12f41"
+  },
+  "name": "Comedor economico Mama Coco",
+  "impact": "BAJO",
+  "foundingDate": {
+    "$date": "2009-08-12T00:00:00.000Z"
+  },
+  "email": "mamacoco@gmail.com",
+  "phone": "09756487",
+  "category": "ALIMENTOS",
+  "address": "3ra Avenida 4-20 zona 1"
+},
+{
+  "_id": {
+    "$oid": "67c1d2e35bfea04e68c12f54"
+  },
+  "name": "Microsoft",
+  "impact": "MEDIO",
+  "foundingDate": {
+    "$date": "1976-09-14T00:00:00.000Z"
+  },
+  "email": "micosoft@gmail.com",
+  "phone": "98376456",
+  "category": "TECNOLOGIA",
+  "address": "One Microsoft Way, Redmond, Washington, 98052- 6399, EE. UU"
+},
+{
+  "_id": {
+    "$oid": "67c1d36b5bfea04e68c12f58"
+  },
+  "name": "Google",
+  "impact": "ALTO",
+  "foundingDate": {
+    "$date": "1990-12-31T00:00:00.000Z"
+  },
+  "email": "google1@gmail.com",
+  "phone": "87564857",
+  "category": "TECNOLOGIA",
+  "address": "Estados Unidos: Mountain View (California) 7753, Condado de Santa Clara"
+},
+{
+  "_id": {
+    "$oid": "67c1d3e45bfea04e68c12f5e"
+  },
+  "name": "IGSS",
+  "impact": "MEDIO",
+  "foundingDate": {
+    "$date": {
+      "$numberLong": "-1872892800000"
+    }
+  },
+  "email": "igss@gmail.com",
+  "phone": "87566676",
+  "category": "SALUD",
+  "address": "7A Avenida 22-72 · 2412 1224"
+},
+{
+  "_id": {
+    "$oid": "67c1d42d5bfea04e68c12f62"
+  },
+  "name": "Centro Medico",
+  "impact": "MEDIO",
+  "foundingDate": {
+    "$date": "1999-08-27T00:00:00.000Z"
+  },
+  "email": "centroMedico@gmail.com",
+  "phone": "00009876",
+  "category": "SALUD",
+  "address": "Calzada San Juan 13-90 zona 7 Centro Comercial La Quinta 2do"
+},
+{
+  "_id": {
+    "$oid": "67c1d47e5bfea04e68c12f66"
+  },
+  "name": "GamePass",
+  "impact": "ALTO",
+  "foundingDate": {
+    "$date": "2015-03-12T00:00:00.000Z"
+  },
+  "email": "xboxGamePass@gmail.com",
+  "phone": "09876455",
+  "category": "SERVICIOS",
+  "address": "Calzada San Juan 13-90 zona 7 Centro Comercial La Quinta 2do"
+},
+{
+  "_id": {
+    "$oid": "67c1d52d3de2aa73a77635a2"
+  },
+  "name": "Cementos Progreso",
+  "impact": "MEDIO",
+  "foundingDate": {
+    "$date": {
+      "$numberLong": "-405734400000"
+    }
+  },
+  "email": "cementosProgreso@gmail.com",
+  "phone": "09874587",
+  "category": "CONSTRUCCION",
+  "address": "Calzada San Juan 13-90 zona 7 Centro Comercial La Quinta 2do"
+},
+{
+  "_id": {
+    "$oid": "67c1d5793de2aa73a77635a6"
+  },
+  "name": "Banco Industrial",
+  "impact": "ALTO",
+  "foundingDate": {
+    "$date": "1988-05-21T00:00:00.000Z"
+  },
+  "email": "bancoBi@gmail.com",
+  "phone": "11223344",
+  "category": "FINANZAS",
+  "address": "Calzada San Juan 13-90 zona 7 Centro Comercial La Quinta 2do"
+},
+{
+  "_id": {
+    "$oid": "67c1d5b23de2aa73a77635aa"
+  },
+  "name": "JUGUETON",
+  "impact": "ALTO",
+  "foundingDate": {
+    "$date": "2003-08-17T00:00:00.000Z"
+  },
+  "email": "juguetonaa@gmail.com",
+  "phone": "67456677",
+  "category": "OTROS",
+  "address": "Calzada San Juan 13-90 zona 7 Centro Comercial La Quinta 2do"
+}]
