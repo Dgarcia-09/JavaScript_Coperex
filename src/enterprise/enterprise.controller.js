@@ -7,7 +7,6 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
 
-
 export const addEnterprise = async (req, res)=>{
     try {
         const { name, impact, foundingDate, email, phone, category, address } = req.body;
@@ -124,13 +123,34 @@ export const updateEnterprise = async (req, res)=>{
 
 
 
-export const generateExcel = async (req, res)=>{
-    try{
-        const enterprises = await Enterprise.find()
+export const generateExcel = async (req, res) => {
+    try {
+        const { filtro, category } = req.query;
+        const query = {};
 
-        const workbook = new ExcelJS.Workbook()
+        if (category) {
+            query.category = category;
+        }
 
-        const worksheet = workbook.addWorksheet("Reporte")
+        let option = {};
+        switch (filtro) {
+            case "trayectoria":
+                option = { foundingDate: 1 };
+                break;
+            case "A-Z":
+                option = { name: 1 };
+                break;
+            case "Z-A":
+                option = { name: -1 };
+                break;
+            default:
+                option = {};
+        }
+
+        const enterprises = await Enterprise.find(query).sort(option);
+
+        const workbook = new ExcelJS.Workbook();
+        const worksheet = workbook.addWorksheet("Reporte");
 
         worksheet.columns = [
             { header: "Nombre", key: 'name', width: 30 },
@@ -140,9 +160,9 @@ export const generateExcel = async (req, res)=>{
             { header: "Email", key: 'email', width: 30 },
             { header: "Telefono", key: 'phone', width: 20 },
             { header: "Direccion", key: 'address', width: 60 }
-        ]
+        ];
 
-        enterprises.forEach(enterprise =>{
+        enterprises.forEach(enterprise => {
             worksheet.addRow({
                 name: enterprise.name,
                 impact: enterprise.impact,
@@ -151,15 +171,14 @@ export const generateExcel = async (req, res)=>{
                 email: enterprise.email,
                 phone: enterprise.phone,
                 address: enterprise.address
-            })
-        })
+            });
+        });
 
-        const reportsExcel = path.join(__dirname, '../../public/reports')
-
+        const reportsExcel = path.join(__dirname, '../../public/reports');
         const fileName = `report-${Date.now()}.xlsx`;
-        const filePath = path.join(reportsExcel, fileName)
+        const filePath = path.join(reportsExcel, fileName);
 
-        await workbook.xlsx.writeFile(filePath)
+        await workbook.xlsx.writeFile(filePath);
 
         const fileUrl = `/uploads/reports/${fileName}`;
 
@@ -167,12 +186,12 @@ export const generateExcel = async (req, res)=>{
             success: true,
             message: "Excel generado exitosamente",
             fileUrl
-        })
-    }catch(err){
+        });
+    } catch (err) {
         res.status(500).json({
             success: false,
             message: "Ha habido un error al generar el excel",
             error: err.message
-        })
+        });
     }
-}
+};
