@@ -28,6 +28,12 @@ const enterSchema = Schema({
 
 
     },
+    category:{
+        type: String,
+        enum:["TECNOLOGIA", "ALIMENTOS", "SALUD", "SERVICIOS", "OTROS"],
+        required: [true, "La categoria de su empresa es requerida"],
+        default: "OTROS"
+    },
     address:{
         type: String,
         required: [true, "Su direccion es requerida"],
