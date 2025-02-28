@@ -46,9 +46,9 @@ const enterSchema = Schema({
 })
 
 enterSchema.methods.obtenerTrayectoria = function() {
-    const currentYear = new Date();
-    const Atrajectory = this.trajectory.getYear();  
-    return currentYear.getYear() - Atrajectory;
+    const currentYear = new Date().getFullYear();
+    const foundingYear = this.foundingDate.getFullYear();
+    return currentYear - foundingYear;
 };
 
 export default model("Enterprise", enterSchema)
