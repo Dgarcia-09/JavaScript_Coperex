@@ -13,7 +13,7 @@ export const addEnterpriseValidator = [
     body("email", "El correo de la empresa es requerido").isEmail(),
     body("phone", "El telefono de la empresa es requerido").notEmpty()
     .isLength({ max: 8 }).withMessage("El telefono no debe superar los 8 caracteres"),
-    body("category", "La categoria debe ser una de las siguientes: TECNOLOGIA, ALIMENTOS, SALUD, SERVICIOS, OTROS").isIn(["TECNOLOGIA", "ALIMENTOS", "SALUD", "SERVICIOS", "OTROS"]),
+    body("category", "La categoria debe ser una de las siguientes: TECNOLOGIA, ALIMENTOS, SALUD, SERVICIOS, CONSTRUCCION, FINANZAS, OTROS").isIn(["TECNOLOGIA", "ALIMENTOS", "SALUD", "SERVICIOS", "OTROS"]),
     body("address", "La direccion de la empresa es requerida").notEmpty()
     .isLength({ max: 150 }).withMessage("La direccion no debe superar los 150 caracteres"),
     validarCampos,
@@ -32,6 +32,18 @@ export const updateEnterpriseValidator = [
     body("category", "La categoria debe ser una de las siguientes: TECNOLOGIA, ALIMENTOS, SALUD, SERVICIOS, OTROS").isIn(["TECNOLOGIA", "ALIMENTOS", "SALUD", "SERVICIOS", "OTROS"]),
     body("address", "La direccion de la empresa es requerida").notEmpty()
     .isLength({ max: 150 }).withMessage("La direccion no debe superar los 150 caracteres"),
+    validarCampos,
+    handleErrors
+]
+
+export const getEnterprisesValidator =[
+    validateJWT,
+    validarCampos,
+    handleErrors
+]
+
+export const generateExcelValidator = [
+    validateJWT,
     validarCampos,
     handleErrors
 ]

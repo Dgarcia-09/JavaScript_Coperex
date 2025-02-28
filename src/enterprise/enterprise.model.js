@@ -30,7 +30,7 @@ const enterSchema = Schema({
     },
     category:{
         type: String,
-        enum:["TECNOLOGIA", "ALIMENTOS", "SALUD", "SERVICIOS", "OTROS"],
+        enum:["TECNOLOGIA", "ALIMENTOS", "SALUD", "SERVICIOS", "CONSTRUCCION", "FINANZAS", "OTROS"],
         required: [true, "La categoria de su empresa es requerida"],
         default: "OTROS"
     },
