@@ -1,0 +1,36 @@
+[{
+  "_id": {
+    "$oid": "67c1ccedbb714f36a6db5ab6"
+  },
+  "username": "DiegoGarcia",
+  "email": "diego@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$/BwaxOjpHbAMGQicDsXw1g$vomJ/1SxRsraYPaXwAeAuV5y6gIosvyJguQLpow965E",
+  "role": "ADMIN_ROLE"
+},
+{
+  "_id": {
+    "$oid": "67c1ccf05bfea04e68c12f25"
+  },
+  "username": "admin1",
+  "email": "admin@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$Rns0ANqJv8ZAAaHTPoYTsQ$Tc8QBvuB2HA0BKxSmxYoYllQhZYkuHC9VR7lVD+GytU",
+  "role": "ADMIN_ROLE"
+},
+{
+  "_id": {
+    "$oid": "67c1cd2a5bfea04e68c12f2c"
+  },
+  "username": "Pirulo",
+  "email": "pirulo@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$TqAG0BQSiozfiBNPFiDjZw$YAnJz3kzlWTH7G0C2lV8iTP6DH1VqqrqNG4U7g2b9zI",
+  "role": "ADMIN_ROLE"
+},
+{
+  "_id": {
+    "$oid": "67c1cd925bfea04e68c12f30"
+  },
+  "username": "Capibara000",
+  "email": "capiMMMM@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$Vcrac9cNahAex4eLPCIHlA$Kj+OUAuAofb+tllC8j/KyQF7qGZe5l9Z0IfAMwkLTd0",
+  "role": "ADMIN_ROLE"
+}]
