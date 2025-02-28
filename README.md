@@ -29,7 +29,7 @@ Este proyecto es una API RESTful desarrollada con Node.js, Express y MongoDB que
 - Password = "admin123"
 
 
-## Filtrar 
+# Filtrar 
 
 ```
 http://127.0.0.1:3001/coperex/v1/enterprise/filtrarEmpresas
@@ -43,7 +43,7 @@ Filtrar por categoría (sin ordenar ni paginar):
 
 ```
 
-http://127.0.0.1:3001/coperex/v1/enterprise/filtrarEmpresas?category=tecnologia
+http://127.0.0.1:3001/coperex/v1/enterprise/filtrarEmpresas?category=TECNOLOGIA
 
 ```
 
@@ -74,7 +74,56 @@ http://127.0.0.1:3001/coperex/v1/enterprise/filtrarEmpresas?filtro=trayectoria
 
 ```
 
-http://127.0.0.1:3001/coperex/v1/enterprise/filtrarEmpresas?filtro=trayectoria&category=categoria
+http://127.0.0.1:3001/coperex/v1/enterprise/filtrarEmpresas?filtro=trayectoria&category=TECNOLOGIA
+
+```
+
+# Filtrar Excel
+
+```
+http://127.0.0.1:3001/coperex/v1/enterprise/generarReporte
+
+```
+
+## Ejemplo de cómo usar la ruta:
+
+
+Filtrar por categoría (sin ordenar ni paginar):
+
+```
+
+http://127.0.0.1:3001/coperex/v1/enterprise/generarReporte?category=TECNOLOGIA
+
+```
+
+
+### Ordenar de la A a la Z 
+
+```
+http://127.0.0.1:3001/coperex/v1/enterprise/generarReporte?filtro=A-Z
+
+```
+
+### Ordenar de la Z a la A 
+
+```
+http://127.0.0.1:3001/coperex/v1/enterprise/generarReporte?filtro=Z-A
+
+```
+
+
+### Ordenar por trayectoria 
+
+```
+http://127.0.0.1:3001/coperex/v1/enterprise/generarReporte?filtro=trayectoria
+
+```
+
+### Ordenar por trayectoria (fecha de fundación) y filtrar por categoría :
+
+```
+
+http://127.0.0.1:3001/coperex/v1/enterprise/generarReporte?filtro=trayectoria&category=TECNOLOGIA
 
 ```
 
