@@ -2,13 +2,14 @@ import Enterprise from "./enterprise.model.js";
 
 export const addEnterprise = async (req, res) => {
     try {
-        const { name, impact, foundingDate, email, phone, address } = req.body;
+        const { name, impact, foundingDate, email, phone, category, address } = req.body;
         const newEnterprise = new Enterprise({
             name, 
             impact,
             foundingDate,
             email,
             phone,
+            category,
             address
         })
 
