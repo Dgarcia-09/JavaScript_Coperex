@@ -12,6 +12,23 @@ Este proyecto es una API RESTful desarrollada con Node.js, Express y MongoDB que
 
 - Generacion de reportes: Se recompila la informacion de todas las empresas registradas y genera un reporte de excel
 
+## Categorias disponibles
+
+- TECNOLOGIA 
+- ALIMENTOS
+- SALUD
+- SERVICIOS
+- CONSTRUCCION
+- FINANZAS
+- OTROS
+
+## Datos de admin
+
+- Username = admin1
+- Email = admin@gmail.com
+- Password = "admin123"
+
+
 ## Filtrar 
 
 ```
@@ -19,7 +36,7 @@ http://127.0.0.1:3001/coperex/v1/enterprise/filtrarEmpresas
 
 ```
 
-Ejemplo de cómo usar la ruta:
+## Ejemplo de cómo usar la ruta:
 
 
 Filtrar por categoría (sin ordenar ni paginar):
@@ -31,14 +48,14 @@ http://127.0.0.1:3001/coperex/v1/enterprise/filtrarEmpresas?category=tecnologia
 ```
 
 
-Ordenar de la A a la Z 
+### Ordenar de la A a la Z 
 
 ```
 http://127.0.0.1:3001/coperex/v1/enterprise/filtrarEmpresas?filtro=A-Z
 
 ```
 
-Ordenar de la Z a la A 
+### Ordenar de la Z a la A 
 
 ```
 http://127.0.0.1:3001/coperex/v1/enterprise/filtrarEmpresas?filtro=Z-A
@@ -46,10 +63,18 @@ http://127.0.0.1:3001/coperex/v1/enterprise/filtrarEmpresas?filtro=Z-A
 ```
 
 
-Ordenar por trayectoria 
+### Ordenar por trayectoria 
 
 ```
 http://127.0.0.1:3001/coperex/v1/enterprise/filtrarEmpresas?filtro=trayectoria
+
+```
+
+### Ordenar por trayectoria (fecha de fundación) y filtrar por categoría :
+
+```
+
+http://127.0.0.1:3001/coperex/v1/enterprise/filtrarEmpresas?filtro=trayectoria&category=categoria
 
 ```
 
