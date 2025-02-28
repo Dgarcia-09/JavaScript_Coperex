@@ -20,6 +20,11 @@ const options ={
         ]
     },
     apis:[
+
+        "./src/auth/auth.routes.js",
+        "./src/user/user.routes.js",
+        "./src/enterprise/enterprise.routes.js",
+
     ]
 }
 
